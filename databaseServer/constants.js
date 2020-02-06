@@ -3,7 +3,7 @@
 exports.DEBUG_LOG = true;
 
 exports.share = {
-    my_portSSL: 40543
+    my_portSSL: 40501
 };
 
 const PRIVATE_CONSTANTS_PATH = "../server/modules/private_constants";
@@ -11,7 +11,7 @@ const PRIVATE_CONSTANTS_PATH = "../server/modules/private_constants";
 ////////////////////////////////////////////////////////////////////////////////////
 // Private constants
 const PRIVATE = require(require(PRIVATE_CONSTANTS_PATH).PRIVATE_PATH || PRIVATE_CONSTANTS_PATH);
-exports.password_private_suffix = PRIVATE.password_private_suffix || "sdnejVFVBreb";
+exports.password_private_suffix = PRIVATE.password_private_suffix || "ctpCompMain1";
 exports.share["my_portSSL"] = PRIVATE.SSL_PORTDB || exports.share["my_portSSL"];
 /////////////////////////////////////////////////////////////////////////////////////
 

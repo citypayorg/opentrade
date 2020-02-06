@@ -22,7 +22,7 @@ nvm install 8.0.0
 git clone https://github.com/3s3s/opentrade.git
 cd opentrade
 
-[sudo] npm install 
+[sudo] npm install
 [sudo] npm install -g forever
 ```
 
@@ -46,9 +46,9 @@ exports.walletspassphrase = {
 
 ```
 cd ~/opentrade/databaseServer
-[sudo] forever start main.js
+sudo forever start main.js
 cd  ~/opentrade/server
-[sudo] forever start main.js
+sudo forever start main.js
 ```
 
 In your browser address bar, type https://127.0.0.1
@@ -135,7 +135,7 @@ After that, you coins should appear on the main page.
 **Donate**
 If you find this script is useful then consider donate please
 
-Bitcoin 36WA1WESULub6Q434bQcnmpnk62oLD7vuQ
+Bitcoin bc1qsgadaxzd4dwjnpr35gga82k5ckyy6pxmkxr9kw
 
 Marycoin M9dKNcBYgrbbE2f4tz3ud32KLKj1i9FrmN
 
