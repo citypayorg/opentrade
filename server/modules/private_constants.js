@@ -10,10 +10,11 @@ process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 if (exports.password_private_suffix == 'LONG_RANDOM_STRING1') throw new Error('You MUST change default value exports.password_private_suffix !')
 
 exports.walletspassphrase = {
-    'CTP' : 'PassW0Rd!@#'
+    'CTP' : 'gkgk^^12'
     //,'BTC' : 'LONG_RANDOM_STRING3',
     //,'GGB' : 'PassW0Rd!@#'
     //,'DOGE' : 'PassW0Rd!@#'
+    ,'JDJ' : 'XbEHKPAkjrVDXjo4fuptq3e594rCE86KAAdlqslek'
 };
 
 exports.IsUnlimitedAddress = function(addr)

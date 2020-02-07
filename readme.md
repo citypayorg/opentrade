@@ -19,12 +19,25 @@ bash install_nvm.sh
 
 nvm install 8.0.0
 
-git clone https://github.com/3s3s/opentrade.git
+#git clone https://github.com/3s3s/opentrade.git
+git clone https://github.com/citypayorg/opentrade
 cd opentrade
 
-[sudo] npm install
-[sudo] npm install -g forever
+sudo npm install
+sudo npm install -g forever
 ```
+
+--------------------------------
+err npm does not support Node.js v10.15.2
+npm install npm@latest -g
+--- if not work do this 
+curl https://www.npmjs.com/install.sh | sudo sh
+
+--------------------------------
+openssl genrsa -aes256 -passout pass:비밀번호1@3 -out fullchain.pem 2048
+openssl rsa -outform der -in fullchain.pem -passin pass:비밀번호1@3 -out fullchain.key
+openssl rsa -aes256 -in fullchain.pem -passin pass:비밀번호1@3 -passout pass:new-password  -out fullchain.key
+--------------------------------
 
 ## Here is an example of the file ~/opentrade/server/modules/private_constants.js Edit with your configs.
 ```
@@ -45,11 +58,26 @@ exports.walletspassphrase = {
 **After, you can run exchange**
 
 ```
+--------------------------------
 cd ~/opentrade/databaseServer
-sudo forever start main.js
+sudo forever start -l dataSvr.log --minUptime 5000 --spinSleepTime 2000 -a main.js
+#sudo forever start main.js
+--------------------------------
 cd  ~/opentrade/server
-sudo forever start main.js
+sudo forever start -l myapp.log --minUptime 5000 --spinSleepTime 2000 -a main.js
+#sudo forever start main.js
+
+--------------------------------
+sudo forever list
+--------------------------------
+forever list
+forever restart app.js
+--------------------------------
 ```
+
+
+
+
 
 In your browser address bar, type https://127.0.0.1
 You will see OpenTrade.
@@ -147,5 +175,36 @@ Litecoin LTbDdTijroJEyXt27apQSnuMY4RoXyjdq2
 
 OpenTrade is released under the terms of the MIT license. See LICENSE for more information or see https://opensource.org/licenses/MIT.
 
+
+
+
+
+# ERR
+----------------------------------------------------------------
+-- forever 설치
+npm install -g forever
+forever 
+
+forever start -l myapp.log --minUptime 5000 --spinSleepTime 2000 -a app.js
+# sudo npm install forever -g
+
+forever 설치 방법
+
+forever 시작
+# forever start main.js
+# forever start -w main.js // -w란 watch의 약자이며, 소스코드의 변경이 감지되면 자동으로 node 서버를 재시작 해준다.
+
+동작중인 forever 리스트 확인
+# sudo forever list
+
+forever 중지
+# sudo forever stop 0
+
+로그 확인하는 방법
+forever logs를 이용해서 로그 파일 위치를 확인 가능하다.
+그 후에 cat 파일명을 통해 로그 확인 가능 : cat /root/,forever.b1al,log
+실시간 로그 확인 : tail -f /root/.forever/b1al.log
+----------------------------------------------------------------
+const hskey = fs.readFileSync('/etc/letsencrypt/live/coinsurvey.me/privkey.pem', 'utf8');
 
 
