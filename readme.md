@@ -19,8 +19,8 @@ bash install_nvm.sh
 
 nvm install 8.0.0
 
-#git clone https://github.com/3s3s/opentrade.git
-git clone https://github.com/citypayorg/opentrade
+#git clone https://github.com/3s3s/opentrade.git  --> (orginal)
+git clone https://github.com/citypayorg/opentrade  --> (copy)
 cd opentrade
 
 sudo npm install
@@ -33,11 +33,15 @@ npm install npm@latest -g
 --- if not work do this 
 curl https://www.npmjs.com/install.sh | sudo sh
 
---------------------------------
-openssl genrsa -aes256 -passout pass:비밀번호1@3 -out fullchain.pem 2048
-openssl rsa -outform der -in fullchain.pem -passin pass:비밀번호1@3 -out fullchain.key
-openssl rsa -aes256 -in fullchain.pem -passin pass:비밀번호1@3 -passout pass:new-password  -out fullchain.key
---------------------------------
+------------------------------------------------------------------------------------
+원본에 필요한 fullchain.pem    privkey.pem
+------------------------------------------------------------------------------------
+openssl req -newkey rsa:2048 -new -nodes -keyout pri.pem -out fullchain.pem
+openssl x509 -req -days 365 -in fullchain.pem -signkey pri.pem -out server.crt
+------------------------------------------------------------------------------------
+openssl req -newkey rsa:2048 -new -nodes -keyout pri2.pem -out privkey.pem
+openssl x509 -req -days 365 -in privkey.pem -signkey pri2.pem -out server2.crt
+------------------------------------------------------------------------------------
 
 ## Here is an example of the file ~/opentrade/server/modules/private_constants.js Edit with your configs.
 ```
@@ -64,20 +68,17 @@ sudo forever start -l dataSvr.log --minUptime 5000 --spinSleepTime 2000 -a main.
 #sudo forever start main.js
 --------------------------------
 cd  ~/opentrade/server
-sudo forever start -l myapp.log --minUptime 5000 --spinSleepTime 2000 -a main.js
+sudo forever start -l webSvr.log --minUptime 5000 --spinSleepTime 2000 -a main.js
 #sudo forever start main.js
 
 --------------------------------
 sudo forever list
 --------------------------------
-forever list
-forever restart app.js
+ps aux | grep main.js
+sudo kill 3460
+sudo kill 3540
 --------------------------------
 ```
-
-
-
-
 
 In your browser address bar, type https://127.0.0.1
 You will see OpenTrade.
@@ -130,8 +131,8 @@ All visible coins should be appear in the Wallet. You should create default coin
 
 File ~/opentrade/server/constants.js have settings that you can change
 
-https://github.com/3s3s/opentrade/blob/master/server/constants.js
-
+https://github.com/3s3s/opentrade/blob/master/server/constants.js  --> original source
+https://github.com/citypayorg/opentrade/blob/master/server/constants.js  --> fork source
 ```
 exports.NOREPLY_EMAIL = 'no-reply@multicoins.org'; //change no-reply email
 exports.SUPPORT_EMAIL = 'ivanivanovkzv@gmail.com'; //change to your valid email for support requests
