@@ -85,7 +85,7 @@ sudo kill 3540
 --------------------------------
 ```
 
-In your browser address bar, type https://127.0.0.1:40501
+In your browser address bar, type https://127.0.0.1:40745
 You will see OpenTrade.
 
 The first registered user will be exchange administrator. 

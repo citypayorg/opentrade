@@ -3,7 +3,7 @@
 exports.DEBUG_LOG = true;
 
 exports.share = {
-    my_portSSL: 40501
+    my_portSSL: 40745
 };
 
 const PRIVATE_CONSTANTS_PATH = "../server/modules/private_constants";
