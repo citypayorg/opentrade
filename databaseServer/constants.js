@@ -18,6 +18,10 @@ exports.share["my_portSSL"] = PRIVATE.SSL_PORTDB || exports.share["my_portSSL"];
 exports.SSL_options = {
     key: require("fs").readFileSync(PRIVATE.SSL_KEY),
     cert: require("fs").readFileSync(PRIVATE.SSL_CERT)
+    // key: fs.readFileSync('/home/dev/opentrade/ssl_certificates/private.pem'),
+    // cert: fs.readFileSync('/home/dev/opentrade/ssl_certificates/public.pem')
+    // key: require("fs").readFileSync('/home/dev/opentrade/ssl_certificates/privkey.pem', 'utf8'),
+    // cert: require("fs").readFileSync('/home/dev/opentrade/ssl_certificates/server2.crt', 'utf8')
 };
 
 exports.IsAllowedAddress = function(addr)

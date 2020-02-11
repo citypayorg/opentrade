@@ -30,7 +30,7 @@ sudo npm install -g forever
 --------------------------------
 err npm does not support Node.js v10.15.2
 npm install npm@latest -g
---- if not work do this 
+--- if not work do this
 curl https://www.npmjs.com/install.sh | sudo sh
 
 ------------------------------------------------------------------------------------
@@ -42,6 +42,11 @@ openssl x509 -req -days 365 -in fullchain.pem -signkey pri.pem -out server.crt
 openssl req -newkey rsa:2048 -new -nodes -keyout pri2.pem -out privkey.pem
 openssl x509 -req -days 365 -in privkey.pem -signkey pri2.pem -out server2.crt
 ------------------------------------------------------------------------------------
+개인키발급
+openssl genrsa 1024 > private.pem
+
+공개키 생성
+openssl req -x509 -new -key private.pem > public.pem
 
 ## Here is an example of the file ~/opentrade/server/modules/private_constants.js Edit with your configs.
 ```
@@ -80,7 +85,7 @@ sudo kill 3540
 --------------------------------
 ```
 
-In your browser address bar, type https://127.0.0.1
+In your browser address bar, type https://127.0.0.1:40501
 You will see OpenTrade.
 
 The first registered user will be exchange administrator. 

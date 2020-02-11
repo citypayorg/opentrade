@@ -270,7 +270,11 @@ exports.walletpassphrase = function (ticker)
 exports.SSL_options = {
     key: require("fs").readFileSync(PRIVATE.SSL_KEY),
     cert: require("fs").readFileSync(PRIVATE.SSL_CERT)
+    // key: require("fs").readFileSync('/home/dev/opentrade/ssl_certificates/fullchain.pem', 'utf8'),
+    // cert: require("fs").readFileSync('/home/dev/opentrade/ssl_certificates/server.crt', 'utf8')
 };
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////
 
