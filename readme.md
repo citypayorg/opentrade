@@ -26,6 +26,8 @@ cd opentrade
 sudo npm install
 sudo npm install -g forever
 ```
+npm i ejs@1.x   --> 2020-02-12
+npm install cors --save
 
 --------------------------------
 err npm does not support Node.js v10.15.2
