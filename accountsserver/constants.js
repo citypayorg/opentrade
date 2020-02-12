@@ -5,7 +5,7 @@ const DOMAIN = 'localhost';
 exports.DEBUG_LOG = false;
 
 exports.share = {
-    my_port: 40745
+    my_port: 40545
 };
 
 const DATABASE_PATH = '/root/opentrade/accountsserver/database/sqlite_accounts.db';

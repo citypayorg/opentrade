@@ -70,15 +70,18 @@ exports.walletspassphrase = {
 --------------------------------
 cd ~/opentrade/databaseServer
 sudo forever start -l dataSvr.log --minUptime 5000 --spinSleepTime 2000 -a main.js
-#sudo forever start main.js
---------------------------------
+
+cd  ~/opentrade/accountsserver
+sudo forever start -l accSvr.log --minUptime 5000 --spinSleepTime 2000 -a main.js
+
 cd  ~/opentrade/server
 sudo forever start -l webSvr.log --minUptime 5000 --spinSleepTime 2000 -a main.js
-#sudo forever start main.js
-
 --------------------------------
 sudo forever list
 --------------------------------
+//어떤 프로세스가 80번 포트를 사용 중이지 확인
+sudo lsof -i :80
+
 ps aux | grep main.js
 sudo kill 3460
 sudo kill 3540

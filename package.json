@@ -7,11 +7,12 @@
     "url": "https://github.com/citypayorg/opentrade"
   },
   "dependencies": {
+    "cors": "latest",
+    "ejs": "latest",
     "express": "latest",
-    "ws": "latest",
+    "forever-monitor": "^2.0.0",
     "sendmail": "latest",
     "sqlite3": "latest",
-    "ejs": "latest",
-    "cors": "latest"
+    "ws": "latest"
   }
 }
