@@ -17,7 +17,7 @@ exports.walletspassphrase = {
     //,'BTC' : 'LONG_RANDOM_STRING3',
     //,'GGB' : 'PassW0Rd!@#'
     //,'DOGE' : 'PassW0Rd!@#'
-    ,'JDJ' : 'XbEHKPAkjrVDXjo4fuptq3e594rCE86KAAdlqslek'
+    ,'JDJ' : 'gkgk^^12'
 };
 
 exports.IsUnlimitedAddress = function(addr)

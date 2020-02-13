@@ -9,3 +9,8 @@ $('#id-button-lang-ru').on('click', e => {
     utils.setCookie('lang', 'ru');
     location.reload(); 
 })
+
+$('#id-button-lang-kr').on('click', e => {
+    utils.setCookie('lang', 'kr');
+    location.reload(); 
+})

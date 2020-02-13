@@ -1,7 +1,8 @@
 'use strict';
 
 const SUPPORT_EMAIL = 'citypay.org@gmail.com';
-const NOREPLY_EMAIL = 'no-reply@gmail.com';
+//const NOREPLY_EMAIL = 'no-reply@gmail.com';
+const NOREPLY_EMAIL = 'citypay.org@gmail.com';
 const DOMAIN = 'localhost';
 
 const MAILER_NAME = 'OpenTrade Mailer';
@@ -16,7 +17,7 @@ exports.share = {
    tradeEnabled: true,
    withdrawEnabled: true,
    recaptchaEnabled: false,
-   emailVerificationEnabled: 'enabled', //'disabled' // !!! WARNING !!! DANGER !!! DO NOT CHANGE IT IN PRODUCTION !!! FOR TESTS ONLY !!!
+   emailVerificationEnabled: 'disabled', //'disabled' // !!! WARNING !!! DANGER !!! DO NOT CHANGE IT IN PRODUCTION !!! FOR TESTS ONLY !!!
    pinVerificationEnabled: 'enabled', //'disabled'
    
    TRADE_COMISSION: 0.001, //change trade comission percent
@@ -225,7 +226,7 @@ exports.dbIndexes = [
   },
 ];
 
-const DashForks = ['DASH', 'WAVI'];
+const DashForks = ['DASH', 'WAVI', 'CTP', 'JDJ'];
 
 exports.DEBUG_MODE = process.env.PORT ? true : false;
 exports.WEB_SOCKETS = null;
