@@ -363,7 +363,7 @@ $('#add_coin').click(e => {
         "<form>" +
             "<div class='form-group'>" +
                 "<label class='col-form-label' for='id-newcoin-name'>Coin name</label>" +
-                "<input type='text' class='form-control' id='id-newcoin-name' placeholder='Citypaycoin'>" +
+                "<input type='text' class='form-control' id='id-newcoin-name' placeholder='Citypay'>" +
             "</div>" +
             "<div class='form-group'>" +
                 "<label class='col-form-label' for='id-newcoin-ticker'>Coin ticker</label>" +
