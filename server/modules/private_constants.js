@@ -13,11 +13,11 @@ if (exports.password_private_suffix == 'LONG_RANDOM_STRING1')
     throw new Error('You MUST change default value exports.password_private_suffix !')
 
 exports.walletspassphrase = {
-    'CTP' : 'gkgk^^12'
+    //,'CTP' : 'gkgk^^12'
     //,'BTC' : 'LONG_RANDOM_STRING3',
     //,'GGB' : 'PassW0Rd!@#'
     //,'DOGE' : 'PassW0Rd!@#'
-    ,'JDJ' : 'gkgk^^12'
+    'JDJ' : 'gkgk^^12'
 };
 
 exports.IsUnlimitedAddress = function(addr)

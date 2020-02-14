@@ -219,3 +219,11 @@ forever logs를 이용해서 로그 파일 위치를 확인 가능하다.
 const hskey = fs.readFileSync('/etc/letsencrypt/live/coinsurvey.me/privkey.pem', 'utf8');
 
 
+
+
+RPC call from GetAccountAddress
+Coin 1 started RPC command=getaccountaddress user=1
+rpcPostJSON {"jsonrpc": "1.0", "id":"curltest", "method": "getaccountaddress", "params": ["d056af54d3147a448f35fd7f136b0e16"] }
+RPC call from GetCoinWallet2
+Wait coin 1 RPC queue. command=getbalance
+
