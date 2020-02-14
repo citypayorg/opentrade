@@ -28,7 +28,7 @@ exports.share = {
 //    TRADE_DEFAULT_PAIR: "Litecoin"
 TRADE_MAIN_COIN: "Citypay",
 TRADE_MAIN_COIN_TICKER: "CTP",
-TRADE_DEFAULT_PAIR: "Dogecoin"
+TRADE_DEFAULT_PAIR: "JDJ"
 
 };
 

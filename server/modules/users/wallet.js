@@ -272,7 +272,7 @@ function UpdateAwaitingBalance(socket, userID, coin, balance, hold)
 {
     const account = utils.Encrypt(userID);
     
-    console.log('RPC call from GetCoinWallet2');   
+    console.log('RPC call from GetCoinWallet2 [coin.id : '+coin.id+' /// userID : '+userID+' /// commands.getbalance : '+commands.getbalance+' /// account : '+account+' ]');
     RPC.send3(userID, coin.id, commands.getbalance, [account, 0], ret => {
         if (!balances[userID]) balances[userID] = {};
         if (!balances[userID][coin.id]) balances[userID][coin.id] = {};

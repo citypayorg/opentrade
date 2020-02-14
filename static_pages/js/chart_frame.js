@@ -54,7 +54,7 @@ function UpdateCTPFromLB()
     });
     
     function UpdateCTPInfo() {
-      if (!g_LB_Data || !g_LB_Data.USD || !g_LB_Data.RUB)
+      if (!g_LB_Data || !g_LB_Data.USD || !g_LB_Data.RUB || !g_LB_Data.KRW)
         return;
       
       if (CTP == 'BTC') g_CTP_BTC_Price = 0;
@@ -63,8 +63,9 @@ function UpdateCTPFromLB()
       const BTC = 1/(g_CTP_BTC_Price+1);
       const EUR = g_LB_Data.EUR.rates.last/(g_CTP_BTC_Price+1);
       const RUB = g_LB_Data.RUB.rates.last/(g_CTP_BTC_Price+1);
+      const KRW = g_LB_Data.KRW.rates.last/(g_CTP_BTC_Price+1);
       
-      storage.setItem("LB_DATA", {USD: USD, BTC: BTC, EUR: EUR, RUB: RUB});
+      storage.setItem("LB_DATA", {USD: USD, BTC: BTC, EUR: EUR, RUB: RUB, KRW: KRW});
       
       $('#id_CTP_info').empty();
       if (CTP != 'BTC')
@@ -80,6 +81,7 @@ function UpdateCTPFromLB()
       }
       
       $('#id_CTP_info').append($('<li class="breadcrumb-item">'+RUB.toFixed(2)+' RUB</li>'));
+      $('#id_CTP_info').append($('<li class="breadcrumb-item">'+KRW.toFixed(0)+' KRW</li>'));
     }
 }
 
