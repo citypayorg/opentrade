@@ -338,7 +338,7 @@ $('#del_coin').click(e => {
         "<form>" +
             "<div class='form-group'>" +
                 "<label class='col-form-label' for='id-delcoin-name'>Coin name</label>" +
-                "<input type='text' class='form-control' id='id-delcoin-name' placeholder='Marycoin'>" +
+                "<input type='text' class='form-control' id='id-delcoin-name' placeholder='Citypay'>" +
             "</div>" +
         "</form>";
         

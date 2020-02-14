@@ -90,7 +90,7 @@ sudo kill 3540
 --------------------------------
 ```
 
-In your browser address bar, type https://127.0.0.1:40745
+In your browser address bar, type https://127.0.0.1
 You will see OpenTrade.
 
 The first registered user will be exchange administrator. 
@@ -148,7 +148,7 @@ exports.NOREPLY_EMAIL = 'no-reply@multicoins.org'; //change no-reply email
 exports.SUPPORT_EMAIL = 'ivanivanovkzv@gmail.com'; //change to your valid email for support requests
 const DOMAIN = 'localhost'; //Change to your domain name
 
-exports.TRADE_MAIN_COIN = "Marycoin"; //change Marycoin to your main coin pair
+exports.TRADE_MAIN_COIN = "Citypay"; //change Citypay to your main coin pair
 exports.TRADE_DEFAULT_PAIR = "Litecoin"; //change Litecoin to your default coin pair
 exports.share.TRADE_COMISSION = 0.001; //change trade comission percent
 exports.share.DUST_VOLUME = 0.000001; //change minimal order volume
@@ -161,7 +161,7 @@ File ~/opentrade/static_pages/chart.html
 
 ```
 const PORT_SSL = 40443; //change to your ssl port
-const MAIN_COIN = 'Marycoin'; //change Marycoin to your main coin pair same as in constants.js
+const MAIN_COIN = 'Citypay'; //change Citypay to your main coin pair same as in constants.js
 const DEFAULT_PAIR = 'Litecoin'; //change Litecoin to your default coin pair same as in constants.js
       
 const TRADE_COMISSION = 0.001;
@@ -176,7 +176,7 @@ If you find this script is useful then consider donate please
 
 Bitcoin bc1qsgadaxzd4dwjnpr35gga82k5ckyy6pxmkxr9kw
 
-Marycoin M9dKNcBYgrbbE2f4tz3ud32KLKj1i9FrmN
+Citypay M9dKNcBYgrbbE2f4tz3ud32KLKj1i9FrmN
 
 Dogecoin DCJRhs9Pjr2FBrrUbKvFeWcYC6ZaF2GTAx
 
