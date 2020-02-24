@@ -28,7 +28,7 @@ exports.share = {
 //    TRADE_DEFAULT_PAIR: "Litecoin"
 TRADE_MAIN_COIN: "Citypay",
 TRADE_MAIN_COIN_TICKER: "CTP",
-TRADE_DEFAULT_PAIR: "JDJ"
+TRADE_DEFAULT_PAIR: "UTB"
 
 };
 
@@ -226,7 +226,6 @@ exports.dbIndexes = [
   },
 ];
 
-//const DashForks = ['DASH', 'WAVI', 'CTP', 'JDJ'];
 const DashForks = ['DASH', 'WAVI'];
 
 exports.DEBUG_MODE = process.env.PORT ? true : false;

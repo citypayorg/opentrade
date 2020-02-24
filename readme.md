@@ -69,15 +69,24 @@ exports.walletspassphrase = {
 **After, you can run exchange**
 
 ```
+
+
 --------------------------------
+----------------
+cd ~/coin_exe/utb
+./utb-qt -datadir=/home/dev/coin_exe/utb/data
+
+cd ~/coin_exe/ctp
+./ctp-qt -datadir=/home/dev/coin_exe/ctp/data
+----------------
 cd ~/opentrade/databaseServer
 sudo forever start -l dataSvr.log --minUptime 5000 --spinSleepTime 2000 -a main.js
 
-cd  ~/opentrade/accountsserver
-sudo forever start -l accSvr.log --minUptime 5000 --spinSleepTime 2000 -a main.js
-
 cd  ~/opentrade/server
 sudo forever start -l webSvr.log --minUptime 5000 --spinSleepTime 2000 -a main.js
+
+--cd  ~/opentrade/accountsserver
+--sudo forever start -l accSvr.log --minUptime 5000 --spinSleepTime 2000 -a main.js
 --------------------------------
 sudo forever list
 --------------------------------
@@ -226,4 +235,7 @@ Coin 1 started RPC command=getaccountaddress user=1
 rpcPostJSON {"jsonrpc": "1.0", "id":"curltest", "method": "getaccountaddress", "params": ["d056af54d3147a448f35fd7f136b0e16"] }
 RPC call from GetCoinWallet2
 Wait coin 1 RPC queue. command=getbalance
+
+
+$ ./bitcoin-cli -rpcconnect=rpc.blockchain.info -rpcport=443 -rpcssl -rpcuser=YourWalletIdentifier -rpcpassword=YourPassword getinfo
 
